@@ -117,11 +117,26 @@ export const skills: SkillGroup[] = [
   {
     category: "Soft Skills",
     items: [
-      { name: "Technical Writing" },
-      { name: "System Design" },
-      { name: "Code Review" },
-      { name: "Mentoring" },
-      { name: "Agile / Scrum" },
+      {
+        name: "Technical Writing",
+        desc: "I document systems, decisions, and processes clearly so teams can onboard faster and avoid rediscovering known problems. I write ADRs, runbooks, API docs, and post-mortems in a way that is concise and useful rather than comprehensive for its own sake. Good documentation is part of the engineering work, not an afterthought."
+      },
+      {
+        name: "System Design",
+        desc: "I enjoy working through system design problems — identifying the right trade-offs between consistency, availability, scalability, and maintainability. I approach design iteratively, starting from the real constraints and working outward rather than over-engineering upfront. I have designed systems across event-driven, REST, and layered architectures in both greenfield and legacy modernisation contexts."
+      },
+      {
+        name: "Code Review",
+        desc: "I treat code review as a teaching and quality tool, not a gatekeeping exercise. My reviews focus on correctness, clarity, maintainability, and design intent — not style preferences that tooling should handle. I try to explain the why behind feedback so reviewees grow from the process rather than just fix the diff."
+      },
+      {
+        name: "Mentoring",
+        desc: "I have mentored junior and mid-level engineers across multiple teams, focusing on building their ability to reason through problems rather than just giving answers. I pair with people on complex tasks, give structured feedback during code review, and try to model the habits — clear thinking, incremental commits, asking good questions — that compound over a career."
+      },
+      {
+        name: "Agile / Scrum",
+        desc: "I have worked in Scrum and Kanban teams across several organisations and understand both the ceremony and the underlying intent. I push for lean processes where the team spends time building rather than managing process overhead. I have led sprint planning, retros, and backlog refinement, and I am comfortable challenging Agile theatre when it gets in the way of actual delivery."
+      },
     ],
   },
 ];
