@@ -25,34 +25,34 @@ export default function About(): React.JSX.Element {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Text */}
           <div className="lg:col-span-3 space-y-4 text-slate">
-            <p>
+            <p className="about-intro">
               <span className="text-green font-semibold">I&apos;m Eden</span> — a software engineer who cares deeply about the craft of building
               software that lasts. My work is grounded in Clean Code principles, SOLID design, and
               Object-Oriented Programming — not as buzzwords, but as daily discipline. I believe
               code should be readable, intentional, extensible, and maintainable — honest about what
               it does and built to evolve.
             </p>
-            <p>
+            <p className="about-ddd">
               <span className="text-green font-semibold">Domain-Driven Design</span> as a way to bridge the gap between business complexity and
               technical implementation. I think carefully about bounded contexts, aggregates, and
               domain models — designing systems where the code reflects the language of the problem,
               not just the mechanics of the solution. When the domain model is right, everything
               else tends to fall into place.
             </p>
-            <p>
+            <p className="about-architecture">
               <span className="text-green font-semibold">At the architectural level,</span> I apply patterns like layered architecture,
               hexagonal/ports-and-adapters, and CQRS where they genuinely reduce complexity — not
               for their own sake. I care about separation of concerns, dependency inversion, and
               keeping business logic free from infrastructure details. I&apos;ve found that the best
               systems are the ones where you can change one thing without fearing everything else.
             </p>
-            <p>
+            <p className="about-engineering">
               <span className="text-green font-semibold">Beyond the code itself,</span> I value rigorous testing (unit, integration, contract),
               meaningful code review, and clear technical documentation. Good engineering is a team
               sport — I believe in shared ownership, collective standards, and building trust
               through consistency.
             </p>
-            <p><span className="text-green font-semibold">Here are a few technologies</span> I&apos;ve been working with recently:</p>
+            <p className="about-technologies"><span className="text-green font-semibold">Here are a few technologies</span> I&apos;ve been working with recently:</p>
             <ul className="grid grid-cols-2 gap-1 list-none p-0 mt-2">
               {skills.map((skill) => (
                 <li
