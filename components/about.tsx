@@ -24,35 +24,42 @@ export default function About(): React.JSX.Element {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Text */}
-          <div className="lg:col-span-3 space-y-4 text-slate">
+          <div className="lg:col-span-3 space-y-4 text-slate [&>p]:text-justify">
             <p className="about-intro">
-              <span className="text-green font-semibold">I&apos;m Eden</span> — a software engineer who cares deeply about the craft of building
-              software that lasts. My work is grounded in Clean Code principles, SOLID design, and
-              Object-Oriented Programming — not as buzzwords, but as daily discipline. I believe
-              code should be readable, intentional, extensible, and maintainable — honest about what
-              it does and built to evolve.
+              <span className="text-green font-semibold">I&apos;m Eden</span> &mdash; a software
+              engineer who cares deeply about building software that lasts. I approach engineering
+              as a craft: clean, thoughtful, and grounded in principles like Clean Code, SOLID, and
+              well&ndash;designed OOP. These aren&apos;t buzzwords to me &mdash; they&apos;re the
+              habits that shape how I write and structure systems. I believe great code should be
+              readable, intentional, and easy to extend without slipping into unnecessary
+              complexity. My focus is on clarity, maintainability, and designing solutions that
+              evolve gracefully over time &mdash; future&ndash;ready, but never overengineered.
             </p>
             <p className="about-ddd">
-              <span className="text-green font-semibold">Domain-Driven Design</span> as a way to bridge the gap between business complexity and
-              technical implementation. I think carefully about bounded contexts, aggregates, and
-              domain models — designing systems where the code reflects the language of the problem,
-              not just the mechanics of the solution. When the domain model is right, everything
-              else tends to fall into place.
+              <span className="text-green font-semibold">Domain-Driven Design</span> as a way to
+              bridge the gap between business complexity and technical implementation. I think
+              carefully about bounded contexts, aggregates, and domain models — designing systems
+              where the code reflects the language of the problem, not just the mechanics of the
+              solution. When the domain model is right, everything else tends to fall into place.
             </p>
             <p className="about-architecture">
-              <span className="text-green font-semibold">At the architectural level,</span> I apply patterns like layered architecture,
-              hexagonal/ports-and-adapters, and CQRS where they genuinely reduce complexity — not
-              for their own sake. I care about separation of concerns, dependency inversion, and
-              keeping business logic free from infrastructure details. I&apos;ve found that the best
-              systems are the ones where you can change one thing without fearing everything else.
+              <span className="text-green font-semibold">At the architectural level,</span> I apply
+              patterns like layered architecture, hexagonal/ports-and-adapters, and CQRS where they
+              genuinely reduce complexity — not for their own sake. I care about separation of
+              concerns, dependency inversion, and keeping business logic free from infrastructure
+              details. I&apos;ve found that the best systems are the ones where you can change one
+              thing without fearing everything else.
             </p>
             <p className="about-engineering">
-              <span className="text-green font-semibold">Beyond the code itself,</span> I value rigorous testing (unit, integration, contract),
-              meaningful code review, and clear technical documentation. Good engineering is a team
-              sport — I believe in shared ownership, collective standards, and building trust
-              through consistency.
+              <span className="text-green font-semibold">Beyond the code itself,</span> I value
+              rigorous testing (unit, integration, contract), meaningful code review, and clear
+              technical documentation. Good engineering is a team sport — I believe in shared
+              ownership, collective standards, and building trust through consistency.
             </p>
-            <p className="about-technologies"><span className="text-green font-semibold">Here are a few technologies</span> I&apos;ve been working with recently:</p>
+            <p className="about-technologies">
+              <span className="text-green font-semibold">Here are a few technologies</span>{" "}
+              I&apos;ve been working with recently:
+            </p>
             <ul className="grid grid-cols-2 gap-1 list-none p-0 mt-2">
               {skills.map((skill) => (
                 <li
