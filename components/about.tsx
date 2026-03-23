@@ -36,19 +36,25 @@ export default function About(): React.JSX.Element {
               evolve gracefully over time &mdash; future&ndash;ready, but never overengineered.
             </p>
             <p className="about-ddd">
-              <span className="text-green font-semibold">Domain-Driven Design</span> as a way to
-              bridge the gap between business complexity and technical implementation. I think
-              carefully about bounded contexts, aggregates, and domain models — designing systems
-              where the code reflects the language of the problem, not just the mechanics of the
-              solution. When the domain model is right, everything else tends to fall into place.
+              <span className="text-green font-semibold">Domain-Driven Design</span> is how I bridge
+              the gap between business complexity and technical implementation. I think carefully
+              about bounded contexts, aggregates, and domain models - designing systems where the
+              code expresses the language of the domain, not just the mechanics of the solution.
+              When the model is aligned with the real problem, the architecture becomes clearer, the
+              code becomes simpler, and the system evolves more naturally.
             </p>
             <p className="about-architecture">
-              <span className="text-green font-semibold">At the architectural level,</span> I apply
-              patterns like layered architecture, hexagonal/ports-and-adapters, and CQRS where they
-              genuinely reduce complexity — not for their own sake. I care about separation of
-              concerns, dependency inversion, and keeping business logic free from infrastructure
-              details. I&apos;ve found that the best systems are the ones where you can change one
-              thing without fearing everything else.
+              <span className="text-green font-semibold">At the architectural level,</span> I work
+              across a wide range of styles and environments, from on-prem systems to Azure cloud
+              platforms. I use patterns like layered architecture, hexagonal (ports-and-adapters),
+              Onion Architecture, and Clean Architecture, applying them only when they genuinely
+              reduce complexity. I regularly use repository and service patterns to keep business
+              logic isolated from infrastructure and data access concerns. I care deeply about
+              separation of concerns, dependency inversion, and designing systems that are easy to
+              change and extend. I have experience both designing new cloud-native systems and
+              modernizing 10-year-old applications into cleaner, more scalable cloud architectures.
+              The best systems are the ones where you can change one part without risking the rest,
+              and past projects have taught me how important that really is.
             </p>
             <p className="about-engineering">
               <span className="text-green font-semibold">Beyond the code itself,</span> I value
