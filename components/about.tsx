@@ -35,6 +35,14 @@ export default function About(): React.JSX.Element {
               complexity. My focus is on clarity, maintainability, and designing solutions that
               evolve gracefully over time &mdash; future&ndash;ready, but never overengineered.
             </p>
+            <p className="about-design-patterns">
+              <span className="text-green font-semibold">Design patterns</span> are something I
+              focus on once the core logic is clear, using them to shape code that communicates
+              intent and stays easy to work with. I reach for patterns like Strategy, Factory,
+              Observer, and Decorator only when they simplify the design or make the system easier
+              to reason about. The goal is always the same: code that is clear, purposeful, and
+              structured in a way where every part has a reason to exist.
+            </p>
             <p className="about-ddd">
               <span className="text-green font-semibold">Domain-Driven Design</span> is how I bridge
               the gap between business complexity and technical implementation. I think carefully
