@@ -1,29 +1,64 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavLink {
   label: string;
   href: string;
+  sectionId?: string;
 }
 
 const navLinks: NavLink[] = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/", sectionId: "hero" },
+  { label: "About", href: "/about", sectionId: "about" },
+  { label: "Projects", href: "/projects", sectionId: "projects" },
+  { label: "Skills", href: "/skills", sectionId: "skills" },
+  { label: "Experience", href: "/experience", sectionId: "experience" },
+  { label: "Contact", href: "/contact", sectionId: "contact" },
 ];
 
 export default function Nav(): React.JSX.Element {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Highlight nav based on scroll position when on home page
+  useEffect(() => {
+    if (!isHome) return;
+
+    const sectionIds = navLinks.map((l) => l.sectionId).filter(Boolean) as string[];
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY + 120;
+      let active = sectionIds[0];
+
+      sectionIds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollY) active = id;
+      });
+
+      setActiveSection(active);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHome]);
+
+  const isActive = (link: NavLink): boolean => {
+    if (isHome) return activeSection === link.sectionId;
+    return pathname === link.href;
+  };
 
   return (
     <header
@@ -35,24 +70,26 @@ export default function Nav(): React.JSX.Element {
     >
       <nav className="w-full max-w-[1600px] mx-auto px-6 lg:px-[150px] flex items-center justify-between">
         {/* Logo */}
-        <a
-          href="#hero"
+        <Link
+          href="/"
           className="font-mono text-lg font-semibold text-green transition-colors duration-300 hover:opacity-80"
         >
           &lt;Eden Park&gt;
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ol className="hidden md:flex items-center gap-8 list-none m-0 p-0">
           {navLinks.map((link, i) => (
             <li key={link.href} className="font-mono text-sm">
-              <a
+              <Link
                 href={link.href}
-                className="text-slate-lighter transition-colors duration-300 hover:opacity-80"
+                className={`transition-colors duration-300 hover:opacity-80 ${
+                  isActive(link) ? "text-green" : "text-slate-lighter"
+                }`}
               >
-                <span className="text-green mr-1">0{i + 1}.</span>
+                <span className="text-green mr-1">0{i}.</span>
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ol>
@@ -77,18 +114,20 @@ export default function Nav(): React.JSX.Element {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-full left-0 right-0 md:hidden py-8 px-6 flex flex-col items-center gap-6 bg-navy-light ">
+        <div className="absolute top-full left-0 right-0 md:hidden py-8 px-6 flex flex-col items-center gap-6 bg-navy-light">
           <ol className="list-none flex flex-col items-start gap-4">
             {navLinks.map((link, i) => (
               <li key={link.href} className="font-mono text-sm">
-                <a
+                <Link
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-slate-lighter"
+                  className={`transition-colors duration-300 ${
+                    isActive(link) ? "text-green" : "text-slate-lighter"
+                  }`}
                 >
-                  <span className="text-green mr-1">0{i + 1}.</span>
+                  <span className="text-green mr-1">0{i}.</span>
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ol>
