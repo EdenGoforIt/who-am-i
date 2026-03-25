@@ -4,7 +4,29 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
-const skills = ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL", "Tailwind CSS"];
+const skills = [
+  ".NET",
+  "SQL",
+  "Angular",
+  "React",
+  "ReactNative",
+  "Python",
+  "Next.js",
+  "Node.js",
+  "PostgreSQL",
+  "Tailwind CSS",
+  "Azure",
+  "Docker",
+  "Kubernetes",
+  "Git",
+  "GIS",
+  "C++",
+  "Java",
+  "PHP",
+  "Laravel",
+  "OpenCV",
+  "Firebase",
+];
 
 export default function About(): React.JSX.Element {
   return (
@@ -65,10 +87,13 @@ export default function About(): React.JSX.Element {
               and past projects have taught me how important that really is.
             </p>
             <p className="about-engineering">
-              <span className="text-green font-semibold">Beyond the code itself,</span> I value
-              rigorous testing (unit, integration, contract), meaningful code review, and clear
-              technical documentation. Good engineering is a team sport — I believe in shared
-              ownership, collective standards, and building trust through consistency.
+              <span className="text-green font-semibold">Beyond the code itself,</span> I care
+              deeply about the practices that make engineering sustainable: rigorous testing (unit,
+              integration, contract), meaningful code review, clear technical documentation, and
+              solid DevOps foundations. I document issues, edge cases, and lessons learned so the
+              team never has to rediscover the same problems twice. Good engineering is a team sport
+              — built on shared ownership, collective standards, and trust earned through
+              consistency and clarity.
             </p>
             <p className="about-technologies">
               <span className="text-green font-semibold">Here are a few technologies</span>{" "}
