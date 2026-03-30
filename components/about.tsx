@@ -5,27 +5,33 @@ import Image from "next/image";
 import React from "react";
 
 const skills = [
-  ".NET",
-  "SQL",
-  "Angular",
-  "React",
-  "ReactNative",
-  "Python",
-  "Next.js",
-  "Node.js",
-  "PostgreSQL",
-  "Tailwind CSS",
-  "Azure",
-  "Docker",
-  "Kubernetes",
-  "Git",
-  "GIS",
-  "C++",
-  "Java",
-  "PHP",
-  "Laravel",
-  "OpenCV",
-  "Firebase",
+  {
+    name: ".NET",
+    desc: "I have used this throughout my entire career, working across many different .NET versions and architectural styles. My experience covers Azure Functions, SOAP services, REST APIs, classic n tier and 2 or 3 tier systems, and modern patterns like Clean Architecture, Onion Architecture, and ports and adapters. I have also led many projects across these stacks, guiding teams through design, implementation, and long term maintenance.",
+  },
+  {
+    name: "SQL",
+    desc: "Alongside .NET, I have worked extensively with SQL and NoSQL databases including Cosmos DB, MongoDB, MSSQL, MySQL, GIS PostgreSQL and PostgreSQL. I even learned some lessons the hard way — like recovering a production table I once accidentally dropped.",
+  },
+  { name: "Angular", desc: "Enterprise frontend apps with component architecture and RxJS" },
+  { name: "React", desc: "Interactive SPAs with hooks, context, and component-driven design" },
+  { name: "React Native", desc: "Cross-platform mobile apps for iOS and Android" },
+  { name: "Python", desc: "Scripting, data processing, automation, and ML pipelines" },
+  { name: "Next.js", desc: "Full-stack apps with SSR/SSG, API routes, and this portfolio" },
+  { name: "Node.js", desc: "RESTful APIs and lightweight backend services" },
+  { name: "PostgreSQL", desc: "Relational DB design, indexing, and query optimization" },
+  { name: "Tailwind CSS", desc: "Rapid UI development with utility-first styling" },
+  { name: "Azure", desc: "Cloud deployment with App Service, Functions, and Storage" },
+  { name: "Docker", desc: "Containerized apps for consistent dev and production environments" },
+  { name: "Kubernetes", desc: "Orchestrated containerized microservices in production" },
+  { name: "Git", desc: "Version control, branching strategies, and code review workflows" },
+  { name: "GIS", desc: "Geospatial data processing and mapping applications" },
+  { name: "C++", desc: "Systems programming and performance-critical applications" },
+  { name: "Java", desc: "Backend services and enterprise application development" },
+  { name: "PHP", desc: "Web backend development and REST APIs" },
+  { name: "Laravel", desc: "MVC web apps with Eloquent ORM and Blade templates" },
+  { name: "OpenCV", desc: "Computer vision pipelines for image processing and analysis" },
+  { name: "Firebase", desc: "Real-time database, auth, and cloud functions for rapid prototyping" },
 ];
 
 export default function About(): React.JSX.Element {
@@ -99,14 +105,17 @@ export default function About(): React.JSX.Element {
               <span className="text-green font-semibold">Here are a few technologies</span>{" "}
               I&apos;ve been working with recently:
             </p>
-            <ul className="grid grid-cols-2 gap-1 list-none p-0 mt-2">
+            <ul className="grid grid-cols-2 gap-2 list-none p-0 mt-2">
               {skills.map((skill) => (
                 <li
-                  key={skill}
-                  className="font-mono text-sm flex items-center gap-2 text-slate-light"
+                  key={skill.name}
+                  className="font-mono text-sm flex items-start gap-2 text-slate-light"
                 >
-                  <span className="text-green">▹</span>
-                  {skill}
+                  <span className="text-green mt-0.5">▹</span>
+                  <div>
+                    <span>{skill.name}</span>
+                    <p className="text-xs text-slate font-sans mt-0.5 leading-snug">{skill.desc}</p>
+                  </div>
                 </li>
               ))}
             </ul>
