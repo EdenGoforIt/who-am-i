@@ -13,8 +13,14 @@ const skills = [
     name: "SQL",
     desc: "Alongside .NET, I have worked extensively with SQL and NoSQL databases including Cosmos DB, MongoDB, MSSQL, MySQL, GIS PostgreSQL and PostgreSQL. I even learned some lessons the hard way — like recovering a production table I once accidentally dropped.",
   },
-  { name: "Angular", desc: "Enterprise frontend apps with component architecture and RxJS" },
-  { name: "React", desc: "Interactive SPAs with hooks, context, and component-driven design" },
+  {
+    name: "Angular",
+    desc: "I have worked with Angular from the original version 1 through to the latest releases. I have led multiple projects with complex logic and business requirements and also used Ionic to deliver mobile-friendly solutions. I prefer Angular over React because Angular encourages consistent practices, while React allows too many variations. I am detail-oriented, ensuring every component has precise pixel-level padding, margin, and accessibility that meets NZ standards.",
+  },
+  {
+    name: "React",
+    desc: "I have worked on many projects using React, building dynamic and interactive user interfaces. I appreciate React's flexibility and the strong ecosystem of libraries and tools that make it easy to solve a wide range of challenges. Its component-driven model allows fast iteration and clean separation of concerns across complex front-end applications.",
+  },
   { name: "React Native", desc: "Cross-platform mobile apps for iOS and Android" },
   { name: "Python", desc: "Scripting, data processing, automation, and ML pipelines" },
   { name: "Next.js", desc: "Full-stack apps with SSR/SSG, API routes, and this portfolio" },
