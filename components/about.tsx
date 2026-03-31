@@ -19,11 +19,20 @@ const skills = [
   },
   {
     name: "React",
-    desc: "I have worked on many projects using React, building dynamic and interactive user interfaces. I appreciate React's flexibility and the strong ecosystem of libraries and tools that make it easy to solve a wide range of challenges. Its component-driven model allows fast iteration and clean separation of concerns across complex front-end applications.",
+    desc: "I have delivered multiple React projects end-to-end, solving challenges such as complex state management, performance bottlenecks, and large-scale component architecture. I have built reusable component libraries, improved rendering performance through memoization and virtualization, and integrated React apps with REST and GraphQL backends. I also introduced consistent patterns across teams, reducing rework and improving maintainability in fast-moving front-end codebases.",
   },
-  { name: "React Native", desc: "Cross-platform mobile apps for iOS and Android" },
-  { name: "Python", desc: "Scripting, data processing, automation, and ML pipelines" },
-  { name: "Next.js", desc: "Full-stack apps with SSR/SSG, API routes, and this portfolio" },
+  {
+    name: "React Native",
+    desc: "I started building React Native apps with Expo and progressed to fully managed builds and native modules. I have successfully released multiple applications to both the Android and iOS app stores, including public apps used across New Zealand. I have also built several private, business-focused applications, handling everything from architecture and state management to performance tuning, deployment pipelines, and long-term maintenance.",
+  },
+  {
+    name: "Python",
+    desc: "I started with Django to understand full-stack development in Python and appreciated how readable and expressive the language is. I have used Python for data processing, automation, and building simple ML, data science, and analysis pipelines. I have worked on algorithms, data science workflows, and scripting tasks that streamline engineering processes. Python remains one of my favourite languages that can do a variety of tasks, even though its flexibility sometimes makes syntax choices harder to remember.",
+  },
+  {
+    name: "Next.js",
+    desc: "Next.js is one of the frameworks I enjoy the most because it gives me fine-grained control over how and when pages render. I like understanding the trade-offs between SSR, SSG, and client-side rendering, and choosing the right approach for each route. Working with file-based routing, data-fetching strategies, and server-side performance tuning has been genuinely interesting, especially when pushing for fast, predictable rendering across different environments.",
+  },
   { name: "Node.js", desc: "RESTful APIs and lightweight backend services" },
   { name: "PostgreSQL", desc: "Relational DB design, indexing, and query optimization" },
   { name: "Tailwind CSS", desc: "Rapid UI development with utility-first styling" },
@@ -120,7 +129,9 @@ export default function About(): React.JSX.Element {
                   <span className="text-green mt-0.5">▹</span>
                   <div>
                     <span>{skill.name}</span>
-                    <p className="text-xs text-slate font-sans mt-0.5 leading-snug">{skill.desc}</p>
+                    <p className="text-xs text-slate font-sans mt-0.5 leading-snug text-justify">
+                      {skill.desc}
+                    </p>
                   </div>
                 </li>
               ))}
