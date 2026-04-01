@@ -37,9 +37,14 @@ const skills = [
     name: "Node.js",
     desc: "I re-architected Node.js Azure Functions and lightweight APIs to be cleaner, faster, and easier to maintain. Using TypeScript across both backend and frontend made the codebase more reusable and predictable, which helped teams understand and extend the services with less friction. I enjoy how Node.js keeps backend logic simple while still giving me enough flexibility to design clear, modular architectures that scale well.",
   },
-  { name: "PostgreSQL", desc: "Relational DB design, indexing, and query optimization" },
-  { name: "Tailwind CSS", desc: "Rapid UI development with utility-first styling" },
-  { name: "Azure", desc: "Cloud deployment with App Service, Functions, and Storage" },
+  {
+    name: "PostgreSQL",
+    desc: "I first worked with PostgreSQL through its GIS extensions, and I was impressed by how naturally it handles geographical data alongside traditional relational models. The SQL layer feels familiar because most relational databases share common syntax, but Postgres stands out with its power, flexibility, and strong indexing and spatial capabilities.",
+  },
+  {
+    name: "Azure",
+    desc: "I have migrated many projects from on‑prem servers and databases into Azure, working across core services like Service Bus, Functions, Logic Apps, Key Vault, App Services, Cosmo DB, AI, and API Management. That experience helped me design secure, scalable, event‑driven cloud architectures while modernizing legacy systems along the way.",
+  },
   { name: "Docker", desc: "Containerized apps for consistent dev and production environments" },
   { name: "Kubernetes", desc: "Orchestrated containerized microservices in production" },
   { name: "Git", desc: "Version control, branching strategies, and code review workflows" },
