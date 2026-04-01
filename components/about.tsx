@@ -33,7 +33,10 @@ const skills = [
     name: "Next.js",
     desc: "Next.js is one of the frameworks I enjoy the most because it gives me fine-grained control over how and when pages render. I like understanding the trade-offs between SSR, SSG, and client-side rendering, and choosing the right approach for each route. Working with file-based routing, data-fetching strategies, and server-side performance tuning has been genuinely interesting, especially when pushing for fast, predictable rendering across different environments.",
   },
-  { name: "Node.js", desc: "RESTful APIs and lightweight backend services" },
+  {
+    name: "Node.js",
+    desc: "I re-architected Node.js Azure Functions and lightweight APIs to be cleaner, faster, and easier to maintain. Using TypeScript across both backend and frontend made the codebase more reusable and predictable, which helped teams understand and extend the services with less friction. I enjoy how Node.js keeps backend logic simple while still giving me enough flexibility to design clear, modular architectures that scale well.",
+  },
   { name: "PostgreSQL", desc: "Relational DB design, indexing, and query optimization" },
   { name: "Tailwind CSS", desc: "Rapid UI development with utility-first styling" },
   { name: "Azure", desc: "Cloud deployment with App Service, Functions, and Storage" },
