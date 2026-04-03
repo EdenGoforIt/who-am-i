@@ -45,8 +45,6 @@ const skills = [
     name: "Azure",
     desc: "I have migrated many projects from on‑prem servers and databases into Azure, working across core services like Service Bus, Functions, Logic Apps, Key Vault, App Services, Cosmo DB, AI, and API Management. That experience helped me design secure, scalable, event‑driven cloud architectures while modernizing legacy systems along the way.",
   },
-  { name: "Docker", desc: "Containerized apps for consistent dev and production environments" },
-  { name: "Kubernetes", desc: "Orchestrated containerized microservices in production" },
   { name: "Git", desc: "Version control, branching strategies, and code review workflows" },
   { name: "GIS", desc: "Geospatial data processing and mapping applications" },
   { name: "C++", desc: "Systems programming and performance-critical applications" },
