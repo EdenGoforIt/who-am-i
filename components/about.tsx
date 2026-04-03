@@ -45,8 +45,14 @@ const skills = [
     name: "Azure",
     desc: "I have migrated many projects from on‑prem servers and databases into Azure, working across core services like Service Bus, Functions, Logic Apps, Key Vault, App Services, Cosmo DB, AI, and API Management. That experience helped me design secure, scalable, event‑driven cloud architectures while modernizing legacy systems along the way.",
   },
-  { name: "Git", desc: "Version control, branching strategies, and code review workflows" },
-  { name: "GIS", desc: "Geospatial data processing and mapping applications" },
+  {
+    name: "Git",
+    desc: "Deep experience with Git across large and long-running codebases. I design and maintain branching strategies, enforce clean commit practices, and guide teams through effective code review workflows. Comfortable with rebasing, conflict resolution, release management, and keeping repositories healthy and easy to work with.",
+  },
+  {
+    name: "GIS",
+    desc: "Around six months of hands-on GIS experience while completing LINZ-focused courses. Worked with line features and other geometric shapes to make mapping data accurate and usable. Used GIS tools to visualize rivers, roads, building footprints, polygons, and mixed geometries, helping to understand spatial relationships and support mapping workflows.",
+  },
   { name: "C++", desc: "Systems programming and performance-critical applications" },
   { name: "Java", desc: "Backend services and enterprise application development" },
   { name: "PHP", desc: "Web backend development and REST APIs" },
