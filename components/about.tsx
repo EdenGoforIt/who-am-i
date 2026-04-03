@@ -68,6 +68,26 @@ const skills = [
   {
     name: "Firebase",
     desc: "Used Firebase and Google Cloud services alongside Microsoft Azure to support public mobile applications. Worked with authentication, including Azure B2C integration, as well as cloud storage, real-time data, and offline-first databases. Focused on making mobile apps reliable, secure, and responsive across varying network conditions."
+  },
+  {
+    name: "Tailwind CSS",
+    desc: "Used across all my frontend projects for rapid, consistent UI development. I appreciate how it removes the overhead of naming CSS classes and keeps styles co-located with markup. This portfolio is built with Tailwind."
+  },
+  {
+    name: "Docker",
+    desc: "Used Docker to containerize applications and ensure consistent environments from development through to production. Wrote Dockerfiles and Compose configs for multi-service setups, reducing environment-specific bugs and simplifying onboarding for other developers."
+  },
+  {
+    name: "Kubernetes",
+    desc: "Worked with Kubernetes to orchestrate containerized microservices in production. Managed deployments, services, and config maps, and helped maintain cluster health in environments where reliability and uptime were critical."
+  },
+  {
+    name: "Laravel",
+    desc: "Used Laravel for my final academic project, building a production management system for a company. Worked across Eloquent ORM, Blade templates, REST APIs, and migrations — gaining hands-on experience with how Laravel structures and scales backend applications."
+  },
+  {
+    name: "OpenCV",
+    desc: "Used OpenCV in C++ during master's-level coursework to build computer vision pipelines. Applied image processing techniques for object detection, frame analysis, and video processing as part of algorithm-focused projects."
   }
 ];
 
