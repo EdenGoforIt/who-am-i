@@ -162,7 +162,7 @@ export default function About(): React.JSX.Element {
               <span className="text-green font-semibold">Here are a few technologies</span>{" "}
               I&apos;ve been working with recently:
             </p>
-            <ul className="grid grid-cols-2 gap-2 list-none p-0 mt-2">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 list-none p-0 mt-2">
               {skills.map((skill) => (
                 <li
                   key={skill.name}
