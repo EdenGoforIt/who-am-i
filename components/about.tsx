@@ -78,10 +78,6 @@ const skills = [
     desc: "Used Docker to containerize applications and ensure consistent environments from development through to production. Wrote Dockerfiles and Compose configs for multi-service setups, reducing environment-specific bugs and simplifying onboarding for other developers."
   },
   {
-    name: "Kubernetes",
-    desc: "Worked with Kubernetes to orchestrate containerized microservices in production. Managed deployments, services, and config maps, and helped maintain cluster health in environments where reliability and uptime were critical."
-  },
-  {
     name: "Laravel",
     desc: "Used Laravel for my final academic project, building a production management system for a company. Worked across Eloquent ORM, Blade templates, REST APIs, and migrations — gaining hands-on experience with how Laravel structures and scales backend applications."
   },
