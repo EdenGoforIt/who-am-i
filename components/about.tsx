@@ -170,7 +170,7 @@ export default function About(): React.JSX.Element {
                 >
                   <span className="text-green mt-0.5">▹</span>
                   <div>
-                    <span className="text-slate-light font-medium">{skill.name}</span>
+                    <span>{skill.name}</span>
                     <p className="text-xs text-slate font-sans mt-0.5 leading-snug text-justify">
                       {skill.desc}
                     </p>
