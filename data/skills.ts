@@ -12,8 +12,14 @@ export const skills: SkillGroup[] = [
   {
     category: "Languages",
     items: [
-      { name: "TypeScript" },
-      { name: "JavaScript" },
+      {
+        name: "TypeScript",
+        desc: "TypeScript became my default when modernising legacy Angular and React codebases. Converting untyped JavaScript to TypeScript forced a rethink of data shapes and contracts, and the type safety caught a surprising number of subtle bugs before they reached production. I now reach for TypeScript on every frontend and Node.js project — the investment in types pays back quickly on anything that outlives a sprint."
+      },
+      {
+        name: "JavaScript",
+        desc: "JavaScript underpins most of my frontend and Node.js work, but I predominantly write it through TypeScript. My raw JavaScript experience came from upgrading and migrating older Angular and React projects where the original codebase predated modern tooling. Working through those migrations gave me a solid understanding of the language itself — closures, the event loop, prototype chains — not just the framework layer on top."
+      },
       {
         name: "Python",
         desc: "I started with Django to understand full-stack development in Python and appreciated how readable and expressive the language is. I have used Python for data processing, automation, and building simple ML, data science, and analysis pipelines. I have worked on algorithms, data science workflows, and scripting tasks that streamline engineering processes. Python remains one of my favourite languages that can do a variety of tasks, even though its flexibility sometimes makes syntax choices harder to remember."
