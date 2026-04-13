@@ -28,8 +28,14 @@ export const skills: SkillGroup[] = [
         name: "SQL",
         desc: "Alongside .NET, I have worked extensively with SQL and NoSQL databases including Cosmos DB, MongoDB, MSSQL, MySQL, GIS PostgreSQL and PostgreSQL. I even learned some lessons the hard way — like recovering a production table I once accidentally dropped."
       },
-      { name: "HTML" },
-      { name: "CSS" },
+      {
+        name: "HTML",
+        desc: "HTML is where user experience starts for me. I care deeply about semantic markup — using the right elements for the right reasons — because it directly affects accessibility, SEO, and how assistive technologies interpret a page. I have gone through dedicated UX and accessibility courses and apply those principles to every interface I build, ensuring structure communicates meaning before a single line of CSS is written."
+      },
+      {
+        name: "CSS",
+        desc: "CSS is where design intent becomes reality, and I take it seriously. I have studied UX principles and gone through courses specifically focused on visual design and user experience, which changed how I think about spacing, hierarchy, motion, and responsiveness. I write CSS with intention — every margin, padding, and breakpoint is a deliberate decision, not a guess. This portfolio reflects that attention to detail."
+      },
       {
         name: "C++",
         desc: "Learned C++ from scratch and used it extensively in master's-level advanced algorithm courses. Built solutions for robot movement, pathfinding, and OpenCV-based video processing. I enjoyed C++ because it demands a real understanding of memory, performance, and low-level behaviour, which strengthened my ability to design efficient and precise algorithmic solutions."
