@@ -90,7 +90,7 @@ export default function Skills(): React.JSX.Element {
                       animate={{ opacity: 1, height: "auto", marginTop: 16 }}
                       exit={{ opacity: 0, height: 0, marginTop: 0 }}
                       transition={{ duration: 0.25, ease: "easeInOut" }}
-                      className="text-sm text-slate font-sans leading-snug overflow-hidden"
+                      className="text-sm text-slate font-sans leading-snug overflow-hidden text-justify"
                     >
                       {selectedInGroup.desc}
                     </motion.p>
