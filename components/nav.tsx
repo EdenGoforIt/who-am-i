@@ -12,11 +12,12 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: "Home", href: "/", sectionId: "hero" },
-  { label: "About", href: "/about", sectionId: "about" },
-  { label: "Projects", href: "/projects", sectionId: "projects" },
-  { label: "Skills", href: "/skills", sectionId: "skills" },
-  { label: "Experience", href: "/experience", sectionId: "experience" },
-  { label: "Contact", href: "/contact", sectionId: "contact" },
+  { label: "About", href: "#about", sectionId: "about" },
+  { label: "Projects", href: "#projects", sectionId: "projects" },
+  { label: "Skills", href: "#skills", sectionId: "skills" },
+  { label: "Experience", href: "#experience", sectionId: "experience" },
+  { label: "Achievements", href: "#achievements", sectionId: "achievements" },
+  { label: "Contact", href: "#contact", sectionId: "contact" },
 ];
 
 export default function Nav(): React.JSX.Element {
