@@ -102,22 +102,14 @@ function ProjectImages({ images, title }: { images: string[]; title: string }): 
   }
 
   return (
-    <div className="relative w-full h-64 lg:h-80 flex items-end justify-center gap-2 px-2">
+    <div className="relative w-full h-full flex items-start justify-center gap-2 px-2 pt-2">
       {images.map((src, idx) => {
-        const offsets = [
-          "translate-y-4",
-          "translate-y-0",
-          "-translate-y-4",
-          "translate-y-2",
-          "-translate-y-2"
-        ];
-        const offset = offsets[idx % offsets.length];
         const widthClass = count <= 3 ? "w-1/3" : count === 4 ? "w-1/4" : "w-1/5";
 
         return (
           <div
             key={src}
-            className={`relative ${widthClass} h-full rounded-xl overflow-hidden border border-navy-lightest shadow-lg ${offset} flex-shrink-0`}
+            className={`relative ${widthClass} h-full rounded-xl overflow-hidden border border-navy-lightest shadow-lg flex-shrink-0`}
           >
             <Image
               src={src}
@@ -132,12 +124,22 @@ function ProjectImages({ images, title }: { images: string[]; title: string }): 
   );
 }
 
-function TechList({ tech, justify = "start" }: { tech: string[]; justify?: "start" | "end" }): React.JSX.Element {
+function TechList({
+  tech,
+  justify = "start"
+}: {
+  tech: string[];
+  justify?: "start" | "end";
+}): React.JSX.Element {
   const justifyClass = justify === "end" ? "lg:justify-end" : "lg:justify-start";
   return (
     <ul className={`flex flex-wrap gap-2 mb-4 list-none p-0 ${justifyClass}`}>
       {tech.map((t) => (
-        <li key={t} className="font-mono text-xs text-slate-light">
+        <li
+          key={t}
+          className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md font-mono text-xs text-green bg-green/10 border border-green/20"
+        >
+          <span className="w-1 h-1 rounded-full bg-green opacity-70" />
           {t}
         </li>
       ))}
@@ -175,7 +177,12 @@ function ProjectLinks({
         </a>
       )}
       {project.androidUrl && (
-        <a href={project.androidUrl} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
+        <a
+          href={project.androidUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={LINK_PILL}
+        >
           <AndroidIcon /> Play Store
         </a>
       )}
@@ -211,21 +218,17 @@ export default function Projects(): React.JSX.Element {
 
       {/* Featured projects */}
       <div className="space-y-24 mb-20">
-        {featured.map((project, i) => (
+        {featured.map((project) => (
           <motion.div
             key={project.title}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1, ease: [0.645, 0.045, 0.355, 1] }}
             viewport={{ once: true, amount: 0.2 }}
-            className="relative grid grid-cols-1 lg:grid-cols-12 gap-4 items-center"
+            className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
           >
-            {/* Screenshot area */}
-            <div
-              className={`lg:col-span-7 h-64 lg:h-80 rounded flex items-center justify-center bg-navy-light border border-navy-lightest overflow-hidden ${
-                i % 2 === 0 ? "lg:col-start-1" : "lg:col-start-6 lg:row-start-1"
-              }`}
-            >
+            {/* Screenshot area — always left */}
+            <div className="h-64 lg:h-80 rounded flex items-start justify-center bg-navy-light border border-navy-lightest overflow-hidden">
               {project.images && project.images.length > 0 ? (
                 <ProjectImages images={project.images} title={project.title} />
               ) : (
@@ -233,21 +236,15 @@ export default function Projects(): React.JSX.Element {
               )}
             </div>
 
-            {/* Text content */}
-            <div
-              className={`lg:col-span-6 z-10 ${
-                i % 2 === 0
-                  ? "lg:col-start-7 lg:row-start-1 lg:text-right"
-                  : "lg:col-start-1 lg:row-start-1 lg:text-left"
-              }`}
-            >
+            {/* Text content — always right */}
+            <div className="z-10">
               <p className="font-mono text-sm mb-1 text-green">Featured Project</p>
               <h3 className="text-2xl font-semibold mb-4 text-slate-lighter">{project.title}</h3>
               <div className="p-6 rounded mb-4 bg-navy-light text-slate-light text-base">
-                {project.description}
+                <div className="mb-4">{project.description}</div>
+                <TechList tech={project.tech} />
               </div>
-              <TechList tech={project.tech} justify={i % 2 === 0 ? "end" : "start"} />
-              <ProjectLinks project={project} justify={i % 2 === 0 ? "end" : "start"} />
+              <ProjectLinks project={project} />
             </div>
           </motion.div>
         ))}
@@ -289,15 +286,9 @@ export default function Projects(): React.JSX.Element {
               {project.title}
             </h3>
             <p className="text-sm mb-auto leading-relaxed text-slate text-[15px] text-base">
-              {project.description}
+              <div className="mb-4">{project.description}</div>
+              <TechList tech={project.tech} />
             </p>
-            <ul className="flex flex-wrap gap-2 mt-4 list-none p-0">
-              {project.tech.map((t) => (
-                <li key={t} className="font-mono text-xs text-slate-light">
-                  {t}
-                </li>
-              ))}
-            </ul>
           </motion.div>
         ))}
       </div>
