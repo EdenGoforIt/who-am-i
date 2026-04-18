@@ -47,8 +47,8 @@ export const skills: SkillGroup[] = [
       {
         name: "PHP",
         desc: "Used PHP for backend development during my final project, building a Laravel-based system to manage operations for a production company. Worked across REST APIs, data models, and business logic, gaining practical experience with Laravel's framework structure and backend application design."
-      },
-    ],
+      }
+    ]
   },
   {
     category: "Frameworks & Libraries",
@@ -90,8 +90,8 @@ export const skills: SkillGroup[] = [
       {
         name: "OpenCV",
         desc: "Used OpenCV in C++ during master's-level coursework to build computer vision pipelines. Applied image processing techniques for object detection, frame analysis, and video processing as part of algorithm-focused projects."
-      },
-    ],
+      }
+    ]
   },
   {
     category: "Tools & Platforms",
@@ -123,8 +123,8 @@ export const skills: SkillGroup[] = [
       {
         name: "GIS",
         desc: "Around six months of hands-on GIS experience while completing LINZ-focused courses. Worked with line features and other geometric shapes to make mapping data accurate and usable. Used GIS tools to visualize rivers, roads, building footprints, polygons, and mixed geometries, helping to understand spatial relationships and support mapping workflows."
-      },
-    ],
+      }
+    ]
   },
   {
     category: "Soft Skills",
@@ -148,7 +148,7 @@ export const skills: SkillGroup[] = [
       {
         name: "Agile / Scrum",
         desc: "I have worked in Scrum and Kanban teams across several organisations and understand both the ceremony and the underlying intent. I push for lean processes where the team spends time building rather than managing process overhead. I have led sprint planning, retros, and backlog refinement, and I am comfortable challenging Agile theatre when it gets in the way of actual delivery."
-      },
-    ],
-  },
+      }
+    ]
+  }
 ];
