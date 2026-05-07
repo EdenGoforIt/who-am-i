@@ -285,10 +285,10 @@ export default function Projects(): React.JSX.Element {
             <h3 className="text-xl font-semibold mb-3 group-hover:text-green transition-colors text-slate-lighter">
               {project.title}
             </h3>
-            <p className="text-sm mb-auto leading-relaxed text-slate text-[15px] text-base">
+            <div className="text-sm mb-auto leading-relaxed text-slate text-[15px] text-base">
               <div className="mb-4">{project.description}</div>
               <TechList tech={project.tech} />
-            </p>
+            </div>
           </motion.div>
         ))}
       </div>
