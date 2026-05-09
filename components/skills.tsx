@@ -56,10 +56,15 @@ export default function Skills(): React.JSX.Element {
                   {group.items.map((item) => {
                     const hasDesc = !!item.desc;
                     const isSelected = selectedByCategory[group.category] === item.name;
+                    const itemId = item.name.toLowerCase().replace(/\s+/g, "-");
                     return (
                       <li key={item.name}>
                         <button
+                          type="button"
                           onClick={() => handleChipClick(group.category, item.name, hasDesc)}
+                          aria-pressed={isSelected}
+                          aria-expanded={isSelected}
+                          aria-controls={hasDesc ? `${group.category}-desc-${itemId}` : undefined}
                           className={[
                             "tech-chip transition-colors",
                             hasDesc ? "cursor-pointer" : "cursor-default",
@@ -85,6 +90,7 @@ export default function Skills(): React.JSX.Element {
                 <AnimatePresence>
                   {selectedInGroup && (
                     <motion.p
+                      id={`${group.category}-desc-${selectedInGroup.name.toLowerCase().replace(/\s+/g, "-")}`}
                       key={selectedInGroup.name}
                       initial={{ opacity: 0, height: 0, marginTop: 0 }}
                       animate={{ opacity: 1, height: "auto", marginTop: 16 }}
