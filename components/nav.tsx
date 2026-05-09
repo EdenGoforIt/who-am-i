@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
 
 interface NavLink {
   label: string;
@@ -17,7 +17,7 @@ const navLinks: NavLink[] = [
   { label: "Skills", href: "#skills", sectionId: "skills" },
   { label: "Experience", href: "#experience", sectionId: "experience" },
   { label: "Achievements", href: "#achievements", sectionId: "achievements" },
-  { label: "Contact", href: "#contact", sectionId: "contact" },
+  { label: "Contact", href: "#contact", sectionId: "contact" }
 ];
 
 export default function Nav(): React.JSX.Element {
@@ -69,7 +69,10 @@ export default function Nav(): React.JSX.Element {
           : "h-[100px] bg-transparent"
       }`}
     >
-      <nav className="w-full max-w-[1600px] mx-auto px-6 lg:px-[150px] flex items-center justify-between">
+      <nav
+        aria-label="Primary navigation"
+        className="w-full max-w-[1600px] mx-auto px-6 lg:px-[150px] flex items-center justify-between"
+      >
         {/* Logo */}
         <Link
           href="/"
@@ -81,7 +84,11 @@ export default function Nav(): React.JSX.Element {
         {/* Desktop links */}
         <ol className="hidden md:flex items-center gap-8 list-none m-0 p-0">
           {navLinks.map((link, i) => (
-            <li key={link.href} className="font-mono text-sm">
+            <li
+              aria-current={isActive(link) ? "page" : undefined}
+              key={link.href}
+              className="font-mono text-sm"
+            >
               <Link
                 href={link.href}
                 className={`transition-colors duration-300 hover:opacity-80 ${
@@ -97,9 +104,12 @@ export default function Nav(): React.JSX.Element {
 
         {/* Mobile hamburger */}
         <button
+          type="button"
           className="md:hidden flex flex-col gap-1.5 p-2 text-green"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           <span
             className={`block w-6 h-0.5 bg-green transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
@@ -115,13 +125,17 @@ export default function Nav(): React.JSX.Element {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-full left-0 right-0 md:hidden py-8 px-6 flex flex-col items-center gap-6 bg-navy-light">
+        <div
+          id="mobile-menu"
+          className="absolute top-full left-0 right-0 md:hidden py-8 px-6 flex flex-col items-center gap-6 bg-navy-light"
+        >
           <ol className="list-none flex flex-col items-start gap-4">
             {navLinks.map((link, i) => (
               <li key={link.href} className="font-mono text-sm">
                 <Link
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
+                  aria-current={isActive(link) ? "page" : undefined}
                   className={`transition-colors duration-300 ${
                     isActive(link) ? "text-green" : "text-slate-lighter"
                   }`}
