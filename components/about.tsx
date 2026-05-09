@@ -78,7 +78,7 @@ export default function About(): React.JSX.Element {
             <div className="relative w-64 h-64 lg:w-72 lg:h-72 flex-shrink-0">
               <Image
                 src="/images/profile.png"
-                alt="Eden Park"
+                alt="Portrait of Eden Park"
                 fill
                 className="rounded object-cover border-2 border-green"
               />
