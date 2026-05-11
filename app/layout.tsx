@@ -1,4 +1,5 @@
 import Nav from "@/components/nav";
+import { baseUrl } from "@/lib/site-config";
 import type { Metadata } from "next";
 import { Fira_Code, Inter } from "next/font/google";
 import React from "react";
@@ -20,6 +21,11 @@ export const metadata: Metadata = {
   title: "Eden Park | Software Engineer",
   description:
     "Software engineer specializing in full-stack web development. Building fast, accessible, and beautiful digital products.",
+  metadataBase: new URL(baseUrl),
+  robots: {
+    index: true,
+    follow: true
+  },
   openGraph: {
     title: "Eden Park | Software Engineer",
     description: "Software engineer specializing in full-stack web development.",
