@@ -7,25 +7,21 @@ import React, { useEffect, useState } from "react";
 interface NavLink {
   label: string;
   href: string;
-  sectionId?: string;
 }
 
 const navLinks: NavLink[] = [
-  { label: "Home", href: "/", sectionId: "hero" },
-  { label: "About", href: "#about", sectionId: "about" },
-  { label: "Projects", href: "#projects", sectionId: "projects" },
-  { label: "Skills", href: "#skills", sectionId: "skills" },
-  { label: "Experience", href: "#experience", sectionId: "experience" },
-  { label: "Achievements", href: "#achievements", sectionId: "achievements" },
-  { label: "Contact", href: "#contact", sectionId: "contact" }
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Skills", href: "/skills" },
+  { label: "Experience", href: "/experience" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Nav(): React.JSX.Element {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
   const pathname = usePathname();
-  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -33,33 +29,7 @@ export default function Nav(): React.JSX.Element {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Highlight nav based on scroll position when on home page
-  useEffect(() => {
-    if (!isHome) return;
-
-    const sectionIds = navLinks.map((l) => l.sectionId).filter(Boolean) as string[];
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY + 120;
-      let active = sectionIds[0];
-
-      sectionIds.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el && el.offsetTop <= scrollY) active = id;
-      });
-
-      setActiveSection(active);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isHome]);
-
-  const isActive = (link: NavLink): boolean => {
-    if (isHome) return activeSection === link.sectionId;
-    return pathname === link.href;
-  };
+  const isActive = (link: NavLink): boolean => pathname === link.href;
 
   return (
     <header
