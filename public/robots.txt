@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://who-am-i-rho.vercel.app/sitemap.xml
