@@ -36,6 +36,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }): React.JSX.Element {
   return (
     <html lang="en" className={`${inter.variable} ${firaCode.variable}`}>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="7vorro1sEZ2KqSh2ZTvFiXG6CDnOsVru8WcL_AgNrAw"
+        />
+      </head>
       <body className="font-sans">
         <a href="#hero" className="skip-link">
           Skip to main content
