@@ -8,9 +8,9 @@ const container = {
   show: {
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.3,
-    },
-  },
+      delayChildren: 0.3
+    }
+  }
 };
 
 const item = {
@@ -18,8 +18,8 @@ const item = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.645, 0.045, 0.355, 1] },
-  },
+    transition: { duration: 0.5, ease: [0.645, 0.045, 0.355, 1] }
+  }
 };
 
 export default function Hero(): React.JSX.Element {
@@ -44,7 +44,7 @@ export default function Hero(): React.JSX.Element {
           variants={item}
           className="font-semibold leading-tight mb-6 text-[clamp(28px,6vw,60px)] text-slate"
         >
-          I build things for the web.
+          I build thoughtful, production-ready software.
         </motion.h2>
 
         <motion.p variants={item} className="max-w-xl mb-10 leading-relaxed text-slate text-lg">
