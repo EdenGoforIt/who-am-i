@@ -1,8 +1,3 @@
-export interface ProjectWorkSection {
-  title: string;
-  items: string[];
-}
-
 export interface ProjectUrls {
   live?: string;
   github?: string;
@@ -10,6 +5,14 @@ export interface ProjectUrls {
   ios?: string;
   web?: string;
   articles?: string[];
+}
+
+export interface ProjectWorkSection {
+  title: string;
+  description?: string;
+  items: string[];
+  images?: string[];
+  urls?: ProjectUrls;
 }
 
 export interface Project {
@@ -27,6 +30,101 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    title: "MPI (Ministry for Primary Industries)",
+    companyDescription:
+      "MPI is the lead government agency responsible for the food and fibre sector, encompassing agriculture, forestry, fisheries, biosecurity, and food safety.",
+    whatIdid:
+      "Delivered software across multiple MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service. Contributed to border control and inspection workflows through the CEMS platform. Replaced legacy vehicle clearance functionality with modern web-based workflows and real-time status visibility. Integrated enterprise and external systems using .NET, Angular, MSSQL, BizTalk, REST, SOAP, and APIM.",
+    slug: "mpi",
+    description:
+      "Worked across many MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service — replacing legacy systems, contributing to border control (CEMS) and vehicle clearance platforms to support regulatory compliance and real-time tracking.",
+    highlights: [
+      "Delivered software across multiple MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service.",
+      "Contributed to border control and inspection workflows through the CEMS platform.",
+      "Replaced legacy vehicle clearance functionality with modern web-based workflows and real-time status visibility.",
+      "Integrated enterprise and external systems using .NET, Angular, MSSQL, BizTalk, REST, SOAP, and APIM."
+    ],
+    workSections: [
+      {
+        title:
+          "CEMS / Container Check Portal / Transitional Facilities / Mobile (Development, Integration, Testing)",
+        description:
+          "Built around micro-services and micro-frontends, each solving different domain problems. This work integrated internal and external systems to streamline border control operations, container checks, and risk detection with accurate, timely workflows.",
+        items: [
+          "Served as a main developer and code reviewer for border control and inspection workflows.",
+          "Integrated external systems and laboratory data sources to support automated polling and seamless information exchange.",
+          "Designed and implemented a testing strategy with unit, integration, and E2E suites to improve reliability and maintainability of the code.",
+          "Delivered reusable .NET and Angular template solutions for other MPI teams to improve consistency and accelerate development.",
+          "Spearheaded the development of a mobile application for MPI inspectors to access CEMS workflows and information in the field."
+        ],
+        urls: {
+          articles: [
+            "https://www.mpi.govt.nz/import/border-clearance/containers-and-cargo-border-clearance/100-sea-container-checks-for-transitional-facilities"
+          ]
+        }
+      },
+      {
+        title: "Vehicle Clearance Portal (Modernisation)",
+        description:
+          "Modernized a legacy vehicle clearance system into a full-stack web application, enabling real-time clearance visibility across New Zealand ports.",
+        items: [
+          "Led the redevelopment of the legacy vehicle clearance platform into a modern full-stack web application.",
+          "Preserved existing system behavior while improving overall maintainability, reliability, and operational transparency."
+        ],
+        urls: {
+          web: "https://vehicles.mpi.govt.nz/home"
+        }
+      },
+      {
+        title: "New Zealand Forest Service - National Exotic Forest Description (NEFD) Identity",
+        description:
+          "The survey captures critical data on exotic forests, including species composition, age structure, and regional distribution. It supports sustainable forest management, policy decisions, and conservation planning across New Zealand.",
+        items: [
+          "Built a secure identity flow using Azure B2C for survey participants, enabling one-time authentication and access before data submission."
+        ]
+      },
+      {
+        title: "Online Notification System (Modernisation)",
+        description:
+          "Modernized a legacy notification platform while preserving existing behavior and user interfaces.",
+        items: [
+          "Retained current user workflows and screens while moving the platform to modern runtimes and frameworks.",
+          "Upgraded various stack across .NET, Python, React, Node.js, and Azure Functions to improve performance and supportability.",
+          "Split the monolithic repository into smaller, focused services to improve maintainability, reduce coupling, and accelerate delivery.",
+          "Enhanced deployment velocity and developer productivity through a modular architecture.",
+          "Migrated critical data flows to an Enterprise Integration Platform (EIP) for stronger security, reliability, and operational support."
+        ],
+        urls: {
+          web: "https://report.mpi.govt.nz/pest/"
+        }
+      }
+    ],
+    tech: [
+      ".NET",
+      "Angular",
+      "MSSQL",
+      "BizTalk",
+      "REST",
+      "SOAP",
+      "APIM",
+      "Azure Function",
+      "Azure App Service",
+      "Azure Service Bus",
+      "Azure Logic App",
+      "Azure Cosmodb",
+      "Azure B2C"
+    ],
+    urls: {
+      web: "https://www.mpi.govt.nz/"
+    },
+    images: [
+      "/images/cems/mpi-logo.png",
+      "/images/cems/mpi-container.jpg",
+      "/images/cems/mpi-ship.jpg"
+    ],
+    featured: true
+  },
   {
     title: "GHSL (Government Health & Safety Lead)",
     companyDescription: "GHSL is a government organization focused on health and safety.",
@@ -81,54 +179,7 @@ export const projects: Project[] = [
     ],
     featured: true
   },
-  {
-    title: "MPI (Ministry for Primary Industries)",
-    companyDescription: "MPI is a government organization focused on primary industries.",
-    whatIdid:
-      "Delivered software across multiple MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service. Contributed to border control and inspection workflows through the CEMS platform. Replaced legacy vehicle clearance functionality with modern web-based workflows and real-time status visibility. Integrated enterprise and external systems using .NET, Angular, MSSQL, BizTalk, REST, SOAP, and APIM.",
-    slug: "mpi",
-    description:
-      "Worked across many MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service — replacing legacy systems, contributing to border control (CEMS) and vehicle clearance platforms to support regulatory compliance and real-time tracking.",
-    highlights: [
-      "Delivered software across multiple MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service.",
-      "Contributed to border control and inspection workflows through the CEMS platform.",
-      "Replaced legacy vehicle clearance functionality with modern web-based workflows and real-time status visibility.",
-      "Integrated enterprise and external systems using .NET, Angular, MSSQL, BizTalk, REST, SOAP, and APIM."
-    ],
-    workSections: [
-      {
-        title: "CEMS",
-        items: [
-          "Contributed as a main developer and code reviewer for border control and inspection workflows.",
-          "Supported inspection and clearance processes for imported products and food across multiple project phases."
-        ]
-      },
-      {
-        title: "Vehicle Check Portal",
-        items: [
-          "Replaced the legacy vehicle clearance system with a modern full-stack web application.",
-          "Delivered real-time vehicle clearance visibility used across ports in New Zealand."
-        ]
-      },
-      {
-        title: "Fisheries and MPI Integrations",
-        items: [
-          "Worked across MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service.",
-          "Integrated enterprise and external systems using .NET, Angular, MSSQL, BizTalk, REST, SOAP, and APIM."
-        ]
-      }
-    ],
-    tech: [".NET", "Angular", "MSSQL", "BizTalk", "REST", "SOAP", "APIM"],
-    urls: {
-      web: "https://www.mpi.govt.nz/"
-    },
-    images: [
-      "/images/cems/mpi-logo.png",
-      "/images/cems/mpi-container.jpg",
-      "/images/cems/mpi-ship.jpg"
-    ],
-    featured: true
-  },
+
   {
     title: "NZQA – Qualifications & Credentials Repository",
     whatIdid:

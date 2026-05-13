@@ -1,5 +1,6 @@
 import { getProjectBySlug, projects } from "@/data/projects";
 import { baseUrl } from "@/lib/site-config";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -122,6 +123,11 @@ export default async function ProjectDetailPage({
                   className="rounded-2xl border border-navy-lightest bg-navy-light p-6 md:p-8"
                 >
                   <h3 className="text-xl font-semibold text-slate-lighter mb-3">{section.title}</h3>
+                  {section.description && (
+                    <p className="text-slate text-sm leading-6 mb-3 opacity-80">
+                      {section.description}
+                    </p>
+                  )}
                   <ul className="space-y-3">
                     {section.items.map((item) => (
                       <li key={item} className="flex items-start gap-3 text-slate leading-7">
@@ -130,6 +136,54 @@ export default async function ProjectDetailPage({
                       </li>
                     ))}
                   </ul>
+                  {section.images && section.images.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {section.images.map((src) => (
+                        <div
+                          key={src}
+                          className="relative h-20 w-32 overflow-hidden rounded-lg border border-navy-lightest"
+                        >
+                          <Image
+                            src={src}
+                            alt=""
+                            fill
+                            className="object-cover transition-opacity duration-200 hover:opacity-80"
+                            sizes="128px"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {section.urls && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {[
+                        section.urls.github ? { label: "GitHub", href: section.urls.github } : null,
+                        section.urls.live ? { label: "Live Site", href: section.urls.live } : null,
+                        section.urls.web ? { label: "Website", href: section.urls.web } : null,
+                        section.urls.android
+                          ? { label: "Play Store", href: section.urls.android }
+                          : null,
+                        section.urls.ios ? { label: "App Store", href: section.urls.ios } : null,
+                        ...(section.urls.articles?.map((url, i) => ({
+                          label:
+                            section.urls!.articles!.length > 1 ? `Article ${i + 1}` : "Article",
+                          href: url
+                        })) ?? [])
+                      ]
+                        .filter((link): link is { label: string; href: string } => Boolean(link))
+                        .map((link) => (
+                          <a
+                            key={`${link.label}-${link.href}`}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-navy-lightest text-xs font-mono text-slate-lighter bg-navy transition-all duration-200 hover:border-green hover:text-green"
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
