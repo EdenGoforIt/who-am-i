@@ -226,7 +226,7 @@ export const projects: Project[] = [
     featured: false
   },
   {
-    title: "Insurance provider DDD refactor & WCF wrapper",
+    title: "One of the largest insurance providers",
     whatIdid:
       "Developed a WCF wrapper to preserve and translate complex business logic during a platform evolution, refining REST and SOAP APIs and migrating .NET services toward a Domain-Driven Design architecture.",
     companyDescription:
