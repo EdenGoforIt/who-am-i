@@ -13,6 +13,10 @@ export const skills: SkillGroup[] = [
     category: "Languages",
     items: [
       {
+        name: "C#",
+        desc: "I have used C# across large enterprise systems, integration services, and cloud solutions. My experience includes building SOAP and REST APIs, event-driven services, and modernising legacy applications with clean architecture patterns in .NET."
+      },
+      {
         name: "TypeScript",
         desc: "TypeScript became my default when modernising legacy Angular and React codebases. Converting untyped JavaScript to TypeScript forced a rethink of data shapes and contracts, and the type safety caught a surprising number of subtle bugs before they reached production. I now reach for TypeScript on every frontend and Node.js project — the investment in types pays back quickly on anything that outlives a sprint."
       },
@@ -77,12 +81,18 @@ export const skills: SkillGroup[] = [
         name: "Node.js",
         desc: "I re-architected Node.js Azure Functions and lightweight APIs to be cleaner, faster, and easier to maintain. Using TypeScript across both backend and frontend made the codebase more reusable and predictable, which helped teams understand and extend the services with less friction. I enjoy how Node.js keeps backend logic simple while still giving me enough flexibility to design clear, modular architectures that scale well."
       },
-      { name: "Express" },
+      {
+        name: "Express",
+        desc: "Used Express to build lightweight REST APIs and middleware for service-oriented applications. I rely on it for clean request routing, consistent error handling, and efficient integration with database and messaging systems. Express has been a dependable foundation for several backend services in both greenfield and modernisation projects."
+      },
       {
         name: "Tailwind CSS",
         desc: "Used across all my frontend projects for rapid, consistent UI development. I appreciate how it removes the overhead of naming CSS classes and keeps styles co-located with markup. This portfolio is built with Tailwind."
       },
-      { name: "Framer Motion" },
+      {
+        name: "Framer Motion",
+        desc: "Used Framer Motion to add motion, transitions, and interactive animation to React applications with a performance-first approach. I apply animation only where it enhances usability, using it to improve clarity, guide attention, and create polished, responsive experiences."
+      },
       {
         name: "Laravel",
         desc: "Used Laravel for my final academic project, building a production management system for a company. Worked across Eloquent ORM, Blade templates, REST APIs, and migrations — gaining hands-on experience with how Laravel structures and scales backend applications."
@@ -100,8 +110,14 @@ export const skills: SkillGroup[] = [
         name: "Git",
         desc: "Deep experience with Git across large and long-running codebases. I design and maintain branching strategies, enforce clean commit practices, and guide teams through effective code review workflows. Comfortable with rebasing, conflict resolution, release management, and keeping repositories healthy and easy to work with."
       },
-      { name: "GitHub" },
-      { name: "Vercel" },
+      {
+        name: "GitHub",
+        desc: "Used GitHub for source control, collaboration, and release management across all projects. I manage pull requests, enforce branch policies, and use GitHub Actions for CI/CD where appropriate to keep builds and releases consistent."
+      },
+      {
+        name: "Vercel",
+        desc: "Leverage Vercel for deploying frontend projects with fast previews, edge caching, and simplified build pipelines. It is my preferred platform for production web deployments when a serverless deployment model is the right fit."
+      },
       {
         name: "Docker",
         desc: "Used Docker to containerize applications and ensure consistent environments from development through to production. Wrote Dockerfiles and Compose configs for multi-service setups, reducing environment-specific bugs and simplifying onboarding for other developers."
@@ -110,8 +126,14 @@ export const skills: SkillGroup[] = [
         name: "PostgreSQL",
         desc: "I first worked with PostgreSQL through its GIS extensions, and I was impressed by how naturally it handles geographical data alongside traditional relational models. The SQL layer feels familiar because most relational databases share common syntax, but Postgres stands out with its power, flexibility, and strong indexing and spatial capabilities."
       },
-      { name: "Figma" },
-      { name: "VS Code" },
+      {
+        name: "Figma",
+        desc: "Used Figma to prototype interfaces, collaborate on design systems, and hand off polished UI assets to engineering teams. I value how its shared libraries and commenting make design review faster and reduce rework during implementation."
+      },
+      {
+        name: "VS Code",
+        desc: "VS Code is my primary editor for most development work. I rely on its extensions, integrated terminal, and workspace settings to stay productive across frontend, backend, and cloud infrastructure tasks."
+      },
       {
         name: "Azure",
         desc: "I have migrated many projects from on-prem servers and databases into Azure, working across core services like Service Bus, Functions, Logic Apps, Key Vault, App Services, Cosmos DB, AI, and API Management. That experience helped me design secure, scalable, event-driven cloud architectures while modernizing legacy systems along the way."

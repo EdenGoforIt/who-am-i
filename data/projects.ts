@@ -35,10 +35,10 @@ export const projects: Project[] = [
     companyDescription:
       "MPI is the lead government agency responsible for the food and fibre sector, encompassing agriculture, forestry, fisheries, biosecurity, and food safety.",
     whatIdid:
-      "Delivered software across multiple MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service. Contributed to border control and inspection workflows through the CEMS platform. Replaced legacy vehicle clearance functionality with modern web-based workflows and real-time status visibility. Integrated enterprise and external systems using .NET, Angular, MSSQL, BizTalk, REST, SOAP, and APIM.",
+      "Delivered software across multiple MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service. Contributed to border control and inspection workflows through the CEMS platform. Replaced legacy vehicle clearance functionality with modern web-based workflows and real-time status visibility. Led the European certificate modernisation effort, building a resilient certificate issuance service with cloud-based asynchronous integration.",
     slug: "mpi",
     description:
-      "Worked across many MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service — replacing legacy systems, contributing to border control (CEMS) and vehicle clearance platforms to support regulatory compliance and real-time tracking.",
+      "Worked across many MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service — replacing legacy systems, contributing to border control and vehicle clearance platforms to support regulatory compliance and real-time tracking. Led a European certificate modernisation programme that improved safety certificate issuance through resilient integration and managed APIs.",
     highlights: [
       "Delivered software across multiple MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service.",
       "Contributed to border control and inspection workflows through the CEMS platform.",
@@ -46,6 +46,20 @@ export const projects: Project[] = [
       "Integrated enterprise and external systems using .NET, Angular, MSSQL, BizTalk, REST, SOAP, and APIM."
     ],
     workSections: [
+      {
+        title: "Future of Certification (Modernisation) - Europe",
+        description:
+          "A European safety certification platform that issues and manages cross-border certificates for MPI and partner systems, supporting regulatory compliance and safe movement of primary industry goods.",
+        items: [
+          "Served as the main developer for the European certificate modernisation programme, building a robust safety certificate issuance service.",
+          "Delivered resilient, cloud-based integration to decouple certificate processing from downstream systems.",
+          "Modernized secure partner integration using managed APIs and centralized secret management.",
+          "Added operational visibility and platform reliability through cloud monitoring and diagnostics."
+        ],
+        urls: {
+          articles: ["https://www.mpi.govt.nz/dmsdocument/54643/direct"]
+        }
+      },
       {
         title:
           "CEMS / Container Check Portal / Transitional Facilities / Mobile (Development, Integration, Testing)",
@@ -98,6 +112,14 @@ export const projects: Project[] = [
         urls: {
           web: "https://report.mpi.govt.nz/pest/"
         }
+      },
+      {
+        title: "Countless integration projects across various teams and domains",
+        items: [
+          "Delivered gateway migration and third-party integration work with external partners.",
+          "Implemented these integrations using cloud and .NET platforms, with other runtimes used where needed for partner compatibility.",
+          "Enabled reliable interoperability across teams and domains through secure messaging, API management, and integration orchestration."
+        ]
       }
     ],
     tech: [
@@ -157,7 +179,7 @@ export const projects: Project[] = [
       {
         title: "GHSL Mobile App",
         items: [
-          "Designed GHSL app branding and shaped the overall user experience.",
+          "Contributed to the app's visual design and overall user experience.",
           "Built the cross-platform mobile experience for GHSL executives and public audiences.",
           "Delivered offline-first access to resources, news, and event updates.",
           "Implemented secure authentication using Azure B2C and Firebase OIDC.",
@@ -202,43 +224,43 @@ export const projects: Project[] = [
       "Cosmos DB",
       "Azure Service Bus",
       "Azure Identity",
-      "C#"
+      ".NET"
     ],
     featured: false
   },
   {
-    title: "Partners Life – DDD Refactor & WCF Wrapper",
+    title: "NZ Insurance Provider – DDD Refactor & WCF Wrapper",
     whatIdid:
-      "Developed a WCF wrapper to translate extensive business logic using diverse design patterns, refining REST and SOAP APIs and migrating .NET projects into a Domain-Driven Design architecture. Transformed deeply nested",
-    companyDescription: "Partners Life is a New Zealand-based insurance company.",
-    slug: "partners-life-ddd-refactor",
+      "Developed a WCF wrapper to preserve and translate complex business logic during a platform evolution, refining REST and SOAP APIs and migrating .NET services toward a Domain-Driven Design architecture.",
+    companyDescription:
+      "A New Zealand-based insurance company undergoing a platform modernisation initiative.",
+    slug: "insurance-provider",
     description:
-      "Developed a WCF wrapper to translate extensive business logic using diverse design patterns, refining REST and SOAP APIs and migrating .NET projects into a Domain-Driven Design architecture. Transformed deeply nested, unreadable code into clean, well-structured, and easily maintainable solutions with a clear separation of business logic.",
+      "Developed a WCF wrapper to preserve and translate complex business logic during a platform evolution, refining REST and SOAP APIs and migrating .NET services toward a Domain-Driven Design architecture with a clear separation of concerns.",
     highlights: [
-      "Built a WCF wrapper to translate and preserve complex business logic during system evolution.",
-      "Refined REST and SOAP APIs while moving key .NET services toward a DDD-aligned architecture.",
-      "Applied design patterns and CQRS-style separation to reduce complexity in heavily nested code.",
-      "Restructured business logic into clearer, more maintainable components with better boundaries."
+      "Built a WCF wrapper to preserve and translate complex business logic during system evolution.",
+      "Refined REST and SOAP APIs while migrating key .NET services toward a DDD-aligned architecture.",
+      "Applied design patterns and CQRS-style separation to improve structure and reduce coupling.",
+      "Restructured business logic into well-defined components with clearer boundaries and improved maintainability."
     ],
-    tech: ["C#", ".NET", "WCF", "DDD", "CQRS", "REST", "SOAP", "Design Patterns"],
+    tech: [".NET", "WCF", "DDD", "Azure Logic App", "REST", "SOAP", "Design Patterns", "Angular"],
     featured: false
   },
   {
     title: "Customer Portal & Logistics SaaS",
     whatIdid:
-      "Designed and built a SaaS client portal for freight companies to create, dispatch, and track orders, alongside an admin panel for managing users and roles. Widely adopted by major NZ logistics companies to streamline order tracking, billing display, and rate management with logistics-specific calculations.",
+      "Designed and built a SaaS client portal for freight companies to create, dispatch, and track orders, alongside an admin panel for managing users and roles.",
     companyDescription:
       "A SaaS client portal for freight companies to manage orders and operations.",
-    slug: "customer-portal-logistics-saas",
+    slug: "logistics-saas",
     description:
-      "Designed and built a SaaS client portal for freight companies to create, dispatch, and track orders, alongside an admin panel for managing users and roles. Widely adopted by major NZ logistics companies to streamline order tracking, billing display, and rate management with logistics-specific calculations.",
+      "Designed and built a SaaS client portal for freight companies to create, dispatch, and track orders, alongside an admin panel for managing users and roles.",
     highlights: [
       "Designed and built the client-facing SaaS portal used to create, dispatch, and track freight orders.",
       "Delivered an internal admin experience for managing users, permissions, and operational workflows.",
-      "Implemented logistics-specific calculations for billing, rate management, and status tracking.",
-      "Supported adoption by major New Zealand logistics companies through practical, operations-focused features."
+      "Implemented logistics-specific calculations for billing, rate management, and status tracking."
     ],
-    tech: [".NET Core", "Angular", "MSSQL", "EF Core", "REST", "Azure"],
+    tech: [".NET", "Angular", "MSSQL", "EF Core", "REST", "Azure"],
     featured: false
   }
 ];
