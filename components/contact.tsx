@@ -59,7 +59,7 @@ export default function Contact(): React.JSX.Element {
         {/* Social links */}
         <div className="flex items-center justify-center gap-6 mt-12">
           <a
-            href="https://github.com"
+            href="https://github.com/EdenGoforIt"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -68,7 +68,7 @@ export default function Contact(): React.JSX.Element {
             <GitHubIcon />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/eden-park-3561291a0/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

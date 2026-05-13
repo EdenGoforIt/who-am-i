@@ -35,13 +35,12 @@ export const projects: Project[] = [
     companyDescription:
       "MPI is the lead government agency responsible for the food and fibre sector, encompassing agriculture, forestry, fisheries, biosecurity, and food safety.",
     whatIdid:
-      "Delivered software across multiple MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service. Contributed to border control and inspection workflows through the CEMS platform. Replaced legacy vehicle clearance functionality with modern web-based workflows and real-time status visibility. Led the European certificate modernisation effort, building a resilient certificate issuance service with cloud-based asynchronous integration.",
+      "Delivered software across multiple MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service. Contributed to border control and inspection workflows through a national compliance platform. Replaced legacy vehicle clearance functionality with modern web-based workflows and real-time status visibility. Led the European certificate modernisation effort, building a resilient certificate issuance service with cloud-based asynchronous integration.",
     slug: "mpi",
     description:
       "Worked across many MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service — replacing legacy systems, contributing to border control and vehicle clearance platforms to support regulatory compliance and real-time tracking. Led a European certificate modernisation programme that improved safety certificate issuance through resilient integration and managed APIs.",
     highlights: [
       "Delivered software across multiple MPI business units including Food & Biosecurity, Fisheries, and New Zealand Forest Service.",
-      "Contributed to border control and inspection workflows through the CEMS platform.",
       "Replaced legacy vehicle clearance functionality with modern web-based workflows and real-time status visibility.",
       "Integrated enterprise and external systems using .NET, Angular, MSSQL, BizTalk, REST, SOAP, and APIM."
     ],
@@ -61,12 +60,11 @@ export const projects: Project[] = [
         }
       },
       {
-        title:
-          "CEMS / Container Check Portal / Transitional Facilities / Mobile (Development, Integration, Testing)",
+        title: "Many internal systems (Development, Integration, Testing)",
         description:
           "Built around micro-services and micro-frontends, each solving different domain problems. This work improved integration, reliability, and user access across a complex operational platform.",
         items: [
-          "Served as a main developer and code reviewer for inspection workflow applications.",
+          "Served as a main developer and code reviewer for workflow applications.",
           "Integrated systems and data sources to improve information flow and support smoother handoffs.",
           "Designed and implemented a testing strategy with unit, integration, and E2E suites to improve reliability and maintainability.",
           "Delivered reusable .NET and Angular template solutions for other teams to improve consistency and accelerate development.",
@@ -79,9 +77,9 @@ export const projects: Project[] = [
         }
       },
       {
-        title: "Vehicle Clearance Portal (Modernisation)",
+        title: "Vehicle clearance platform (Modernisation)",
         description:
-          "Modernized a legacy vehicle clearance system into a full-stack web application, enabling real-time clearance visibility across New Zealand ports.",
+          "Modernized a legacy vehicle clearance system into a full-stack web application, enabling real-time clearance visibility across ports.",
         items: [
           "Led the redevelopment of the legacy vehicle clearance platform into a modern full-stack web application.",
           "Preserved existing system behavior while improving overall maintainability, reliability, and operational transparency."
@@ -91,15 +89,15 @@ export const projects: Project[] = [
         }
       },
       {
-        title: "New Zealand Forest Service - National Exotic Forest Description (NEFD) Identity",
+        title: "Forest service survey identity solution",
         description:
-          "The survey captures critical data on exotic forests, including species composition, age structure, and regional distribution. It supports sustainable forest management, policy decisions, and conservation planning across New Zealand.",
+          "The survey captures critical data on exotic forests, including species composition, age structure, and regional distribution. It supports sustainable forest management, policy decisions, and conservation planning.",
         items: [
           "Built a secure identity flow using Azure B2C for survey participants, enabling one-time authentication and access before data submission."
         ]
       },
       {
-        title: "Online Notification System (Modernisation)",
+        title: "Notification System (Modernisation)",
         description:
           "Modernized a legacy notification platform while preserving existing behavior and user interfaces.",
         items: [
@@ -148,8 +146,8 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    title: "GHSL (Government Health & Safety Lead)",
-    companyDescription: "GHSL is a government organization focused on health and safety.",
+    title: "Government health and safety mobile app",
+    companyDescription: "A government organisation focused on health and safety.",
     whatIdid:
       "Architected and led the full delivery of the product from initial concept through release.",
     slug: "ghsl",
@@ -177,10 +175,10 @@ export const projects: Project[] = [
     ],
     workSections: [
       {
-        title: "GHSL Mobile App",
+        title: "Health and safety mobile app",
         items: [
           "Contributed to the app's visual design and overall user experience.",
-          "Built the cross-platform mobile experience for GHSL executives and public audiences.",
+          "Built the cross-platform mobile experience for executives and public audiences.",
           "Delivered offline-first access to resources, news, and event updates.",
           "Implemented secure authentication using Azure B2C and Firebase OIDC.",
           "Developed the admin portal using React and .NET. with right access control and content management"
@@ -203,11 +201,10 @@ export const projects: Project[] = [
   },
 
   {
-    title: "NZQA – Qualifications & Credentials Repository",
+    title: "Qualifications and credentials repository",
     whatIdid:
       "Integrated legacy systems into a unified repository web app and APIs following RESTful best practices and WCAG accessibility standards. Designed an optimistic concurrency solution for NoSQL Cosmos DB and supported the overall back-end solution architecture.",
-    companyDescription:
-      "NZQA is a government organization focused on qualifications and credentials.",
+    companyDescription: "A government organisation focused on qualifications and credentials.",
     slug: "nzqa-credentials-repository",
     description:
       "Integrated legacy systems into a unified repository web app and APIs following RESTful best practices and WCAG accessibility standards. Designed an optimistic concurrency solution for NoSQL Cosmos DB and supported the overall back-end solution architecture.",
@@ -229,11 +226,11 @@ export const projects: Project[] = [
     featured: false
   },
   {
-    title: "NZ Insurance Provider – DDD Refactor & WCF Wrapper",
+    title: "Insurance provider DDD refactor & WCF wrapper",
     whatIdid:
       "Developed a WCF wrapper to preserve and translate complex business logic during a platform evolution, refining REST and SOAP APIs and migrating .NET services toward a Domain-Driven Design architecture.",
     companyDescription:
-      "A New Zealand-based insurance company undergoing a platform modernisation initiative.",
+      "A regional insurance provider undergoing a platform modernisation initiative.",
     slug: "insurance-provider",
     description:
       "Developed a WCF wrapper to preserve and translate complex business logic during a platform evolution, refining REST and SOAP APIs and migrating .NET services toward a Domain-Driven Design architecture with a clear separation of concerns.",

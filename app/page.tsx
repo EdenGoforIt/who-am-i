@@ -16,7 +16,7 @@ export default function Home(): React.JSX.Element {
     name: "Eden Park",
     url: `${baseUrl}/`,
     jobTitle: "Software Engineer",
-    sameAs: ["https://github.com/", "https://www.linkedin.com/"]
+    sameAs: ["https://github.com/EdenGoforIt", "https://www.linkedin.com/in/eden-park-3561291a0/"]
   };
 
   return (
