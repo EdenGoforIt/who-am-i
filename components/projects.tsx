@@ -3,6 +3,7 @@
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function ExternalLinkIcon(): React.JSX.Element {
@@ -115,6 +116,26 @@ function ArticleIcon(): React.JSX.Element {
   );
 }
 
+function ArrowRightIcon(): React.JSX.Element {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+      focusable="false"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+}
+
 function ProjectImages({ images, title }: { images: string[]; title: string }): React.JSX.Element {
   const count = images.length;
 
@@ -177,6 +198,9 @@ function TechList({
 const LINK_PILL =
   "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-navy-lightest text-xs font-mono text-slate-lighter bg-navy-light transition-all duration-200 hover:border-green hover:text-green hover:bg-navy";
 
+const DETAILS_LINK_PILL =
+  "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-green/40 text-xs font-mono text-green bg-green/10 transition-all duration-200 hover:bg-green/15 hover:border-green";
+
 function ProjectLinks({
   project,
   justify = "start"
@@ -185,44 +209,50 @@ function ProjectLinks({
   justify?: "start" | "end";
 }): React.JSX.Element {
   const justifyClass = justify === "end" ? "lg:justify-end" : "lg:justify-start";
+  const urls = project.urls;
 
   return (
     <div className={`flex gap-2 flex-wrap ${justifyClass}`}>
-      {project.githubUrl && (
-        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
+      {urls?.github && (
+        <a href={urls.github} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
           <GitHubIcon /> GitHub
         </a>
       )}
-      {project.liveUrl && (
-        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
+      {urls?.live && (
+        <a href={urls.live} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
           <ExternalLinkIcon /> Live Site
         </a>
       )}
-      {project.webUrl && (
-        <a href={project.webUrl} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
+      {urls?.web && (
+        <a href={urls.web} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
           <GlobeIcon /> Website
         </a>
       )}
-      {project.androidUrl && (
-        <a
-          href={project.androidUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={LINK_PILL}
-        >
+      {urls?.android && (
+        <a href={urls.android} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
           <AndroidIcon /> Play Store
         </a>
       )}
-      {project.iosUrl && (
-        <a href={project.iosUrl} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
+      {urls?.ios && (
+        <a href={urls.ios} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
           <AppleIcon /> App Store
         </a>
       )}
-      {project.articles?.map((url, idx) => (
+      {urls?.articles?.map((url, idx) => (
         <a key={url} href={url} target="_blank" rel="noopener noreferrer" className={LINK_PILL}>
-          <ArticleIcon /> {project.articles!.length > 1 ? `Article ${idx + 1}` : "Article"}
+          <ArticleIcon /> {urls.articles!.length > 1 ? `Article ${idx + 1}` : "Article"}
         </a>
       ))}
+    </div>
+  );
+}
+
+function ProjectDetailLink({ slug }: { slug: string }): React.JSX.Element {
+  return (
+    <div className="d-block">
+      <Link href={`/projects/${slug}`} className={DETAILS_LINK_PILL}>
+        <ArrowRightIcon /> View details
+      </Link>
     </div>
   );
 }
@@ -247,7 +277,7 @@ export default function Projects(): React.JSX.Element {
       <div className="space-y-24 mb-20">
         {featured.map((project) => (
           <motion.div
-            key={project.title}
+            key={project.slug}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1, ease: [0.645, 0.045, 0.355, 1] }}
@@ -255,23 +285,39 @@ export default function Projects(): React.JSX.Element {
             className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
           >
             {/* Screenshot area — always left */}
-            <div className="h-64 lg:h-80 rounded flex items-start justify-center bg-navy-light border border-navy-lightest overflow-hidden">
+            <Link
+              href={`/projects/${project.slug}`}
+              className="h-64 lg:h-80 rounded flex items-start justify-center bg-navy-light border border-navy-lightest overflow-hidden transition-colors duration-200 hover:border-green"
+              aria-label={`View details for ${project.title}`}
+            >
               {project.images && project.images.length > 0 ? (
                 <ProjectImages images={project.images} title={project.title} />
               ) : (
                 <span className="font-mono text-sm text-green">screenshot</span>
               )}
-            </div>
+            </Link>
 
             {/* Text content — always right */}
             <div className="z-10">
               <p className="font-mono text-sm mb-1 text-green">Featured Project</p>
-              <h3 className="text-2xl font-semibold mb-4 text-slate-lighter">{project.title}</h3>
-              <div className="p-6 rounded mb-4 bg-navy-light text-slate-light text-base">
+              <h3 className="text-2xl font-semibold mb-4 text-slate-lighter">
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="transition-colors duration-200 hover:text-green"
+                >
+                  {project.title}
+                </Link>
+              </h3>
+              <div className="p-4 rounded mb-4 bg-navy-light text-slate-light text-base">
                 <div className="mb-4">{project.description}</div>
                 <TechList tech={project.tech} />
               </div>
-              <ProjectLinks project={project} />
+              <div className="mb-4">
+                <ProjectDetailLink slug={project.slug} />
+              </div>
+              <div className="flex flex-wrap gap-2 items-center">
+                <ProjectLinks project={project} />
+              </div>
             </div>
           </motion.div>
         ))}
@@ -284,7 +330,7 @@ export default function Projects(): React.JSX.Element {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {other.map((project, i) => (
           <motion.div
-            key={project.title}
+            key={project.slug}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: i * 0.1, ease: [0.645, 0.045, 0.355, 1] }}
@@ -312,11 +358,19 @@ export default function Projects(): React.JSX.Element {
               </div>
             </div>
             <h3 className="text-xl font-semibold mb-3 group-hover:text-green transition-colors text-slate-lighter">
-              {project.title}
+              <Link
+                href={`/projects/${project.slug}`}
+                className="transition-colors duration-200 hover:text-green"
+              >
+                {project.title}
+              </Link>
             </h3>
             <div className="text-sm mb-auto leading-relaxed text-slate text-[15px] text-base">
               <div className="mb-4">{project.description}</div>
               <TechList tech={project.tech} />
+            </div>
+            <div className="mt-6">
+              <ProjectDetailLink slug={project.slug} />
             </div>
           </motion.div>
         ))}
