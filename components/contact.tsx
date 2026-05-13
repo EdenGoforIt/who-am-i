@@ -52,7 +52,7 @@ export default function Contact(): React.JSX.Element {
           I&apos;m currently open to new opportunities. Whether you have a question, a project idea,
           or just want to say hi &mdash; my inbox is always open.
         </p>
-        <a href="mailto:hello@eden.dev" className="btn-primary text-base px-10 py-5">
+        <a href="mailto:edengoforit@gmail.com" className="btn-primary text-base px-10 py-5">
           Say Hello
         </a>
 

@@ -53,10 +53,10 @@ export default function Hero(): React.JSX.Element {
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap gap-4">
-          <a href="#projects" className="btn-primary">
+          <a href="/projects" className="btn-primary">
             View My Work
           </a>
-          <a href="#contact" className="btn-primary">
+          <a href="/contact" className="btn-primary">
             Get In Touch
           </a>
         </motion.div>
