@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 
 const container = {
@@ -53,12 +54,12 @@ export default function Hero(): React.JSX.Element {
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap gap-4">
-          <a href="/projects" className="btn-primary">
+          <Link href="/projects" className="btn-primary">
             View My Work
-          </a>
-          <a href="/contact" className="btn-primary">
+          </Link>
+          <Link href="/contact" className="btn-primary">
             Get In Touch
-          </a>
+          </Link>
         </motion.div>
       </motion.div>
     </section>

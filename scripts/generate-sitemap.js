@@ -2,7 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 const baseUrl = process.env.BASE_URL || process.env.NEXT_PUBLIC_BASE_URL || 'https://who-am-i-rho.vercel.app';
-const routes = ['/', '/about', '/projects', '/skills', '/experience', '/contact'];
+const articleDataPath = path.join(__dirname, '..', 'data', 'articles.ts');
+const articleDataContent = fs.readFileSync(articleDataPath, 'utf8');
+const articleRoutes = Array.from(articleDataContent.matchAll(/slug:\s+"([^"]+)"/g)).map(
+	([, slug]) => `/articles/${slug}`
+);
+const routes = ['/', '/about', '/projects', '/skills', '/experience', '/articles', '/contact', ...articleRoutes];
 const lastmod = new Date().toISOString().split('T')[0];
 
 const urls = routes
