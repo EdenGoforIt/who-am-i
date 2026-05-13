@@ -50,13 +50,13 @@ export const projects: Project[] = [
         title:
           "CEMS / Container Check Portal / Transitional Facilities / Mobile (Development, Integration, Testing)",
         description:
-          "Built around micro-services and micro-frontends, each solving different domain problems. This work integrated internal and external systems to streamline border control operations, container checks, and risk detection with accurate, timely workflows.",
+          "Built around micro-services and micro-frontends, each solving different domain problems. This work improved integration, reliability, and user access across a complex operational platform.",
         items: [
-          "Served as a main developer and code reviewer for border control and inspection workflows.",
-          "Integrated external systems and laboratory data sources to support automated polling and seamless information exchange.",
-          "Designed and implemented a testing strategy with unit, integration, and E2E suites to improve reliability and maintainability of the code.",
-          "Delivered reusable .NET and Angular template solutions for other MPI teams to improve consistency and accelerate development.",
-          "Spearheaded the development of a mobile application for MPI inspectors to access CEMS workflows and information in the field."
+          "Served as a main developer and code reviewer for inspection workflow applications.",
+          "Integrated systems and data sources to improve information flow and support smoother handoffs.",
+          "Designed and implemented a testing strategy with unit, integration, and E2E suites to improve reliability and maintainability.",
+          "Delivered reusable .NET and Angular template solutions for other teams to improve consistency and accelerate development.",
+          "Helped deliver a field-capable mobile application to support users working outside the office."
         ],
         urls: {
           articles: [
