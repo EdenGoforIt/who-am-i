@@ -51,7 +51,6 @@ export const experiences: ExperienceItem[] = [
       "Contributed to designing an optimistic concurrency pattern and partition key strategy for NoSQL (Cosmos DB) databases.",
       "Increased unit test code coverage to 90% across 10 microservices using NUnit and XUnit; introduced robust test design practices.",
       "Mentored developers in .NET, OOP, DDD back-end challenges, server management, and CI/CD pipelines.",
-      "Orchestrated the integration of an external API gateway and managed IIS, Azure Storage, and Azure App Service deployments.",
       "Engaged in microservices, Event Sourcing, Event Relay, and Event Bus projects; conducted significant business logic refactoring using design patterns."
     ],
     tech: [
