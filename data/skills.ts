@@ -143,6 +143,10 @@ export const skills: SkillGroup[] = [
         desc: "Used Firebase and Google Cloud services alongside Microsoft Azure to support public mobile applications. Worked with authentication, including Azure B2C integration, as well as cloud storage, real-time data, and offline-first databases. Focused on making mobile apps reliable, secure, and responsive across varying network conditions."
       },
       {
+        name: "Power BI",
+        desc: "Used Power BI to transform SQL data into actionable business intelligence. Developed automated dashboards that used clear, intuitive visual alerts to highlight technical warnings and errors, helping teams stay focused on critical system health and operational metrics."
+      },
+      {
         name: "GIS",
         desc: "Around six months of hands-on GIS experience while completing LINZ-focused courses. Worked with line features and other geometric shapes to make mapping data accurate and usable. Used GIS tools to visualize rivers, roads, building footprints, polygons, and mixed geometries, helping to understand spatial relationships and support mapping workflows."
       }

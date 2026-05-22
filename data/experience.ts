@@ -1,6 +1,6 @@
 export interface ExperienceItem {
   role: string;
-  company: string;
+  company?: string;
   companyUrl?: string;
   period: string;
   description: string[];
@@ -104,5 +104,15 @@ export const experiences: ExperienceItem[] = [
       "XUnit",
       "IIS"
     ]
+  },
+  {
+    role: "Internship",
+    company: "Intership",
+    period: "Jul 2019 — Dec 2019",
+    description: [
+      "Integrated SQL databases with the Power BI platform to develop centralized business intelligence solutions.",
+      "Designed intuitive Power BI dashboards with beautiful interfaces that surface warnings and errors as immediate alerts, allowing the team to focus on critical technical issues."
+    ],
+    tech: ["SQL", "Power BI", "Data Integration", "T-SQL", "ETL"]
   }
 ];

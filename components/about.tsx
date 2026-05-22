@@ -25,8 +25,12 @@ export default function About(): React.JSX.Element {
           <div className="lg:col-span-3 space-y-4 text-slate [&>p]:text-justify">
             <p className="about-intro">
               <span className="text-green font-semibold">I&apos;m Eden</span> &mdash; a software
-              engineer who cares deeply about building software that lasts. I approach engineering
-              as a craft: clean, thoughtful, and grounded in principles like Clean Code, SOLID, and
+              engineer with a{" "}
+              <span className="text-green font-medium">
+                Master&apos;s degree in Software Engineering
+              </span>{" "}
+              who cares deeply about building software that lasts. I approach engineering as a
+              craft: clean, thoughtful, and grounded in principles like Clean Code, SOLID, and
               well&ndash;designed OOP. These aren&apos;t buzzwords to me &mdash; they&apos;re the
               habits that shape how I write and structure systems. I believe great code should be
               readable, intentional, and easy to extend without slipping into unnecessary
